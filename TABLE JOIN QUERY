@@ -1,0 +1,10 @@
+	$tablex1 = "table1";
+  $tablex2 = "table2";
+    
+  //SQL Query
+	  $query = $this->db->query("
+		SELECT * FROM {$tablex1} 
+		INNER JOIN {$tablex2} 
+		ON table1.pid_user = table1.pid_user
+		WHERE table1.status = '$status' ORDER BY table1.id DESC LIMIT 100
+		"); //Query Database
