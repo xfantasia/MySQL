@@ -1,7 +1,7 @@
-	$tablex1 = "table1";
-  $tablex2 = "table2";
-    
-  //SQL Query
+	  $tablex1 = "table1";
+	  $tablex2 = "table2";
+
+	  //SQL Query
 	  $query = $this->db->query("
 		SELECT * FROM {$tablex1} 
 		INNER JOIN {$tablex2} 
