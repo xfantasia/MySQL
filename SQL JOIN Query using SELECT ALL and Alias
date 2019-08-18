@@ -1,0 +1,11 @@
+	   	$tablex1 = "orders";
+  		$tablex2 = "users";
+    
+  	//SQL JOIN Query using SELECT ALL and Alias
+	  $query = $this->db->query("
+		SELECT *,
+		orders.id AS order_id, orders.date_updated AS order_date_updated
+		FROM {$tablex1}
+		INNER JOIN {$tablex2} 
+		ON orders.pid_user = users.pid_user 
+		WHERE orders.order_status = '$order_status' ORDER BY orders.date_updated DESC LIMIT $limit OFFSET $offset "); //Query Database
